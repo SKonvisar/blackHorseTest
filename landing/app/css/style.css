@@ -67,3 +67,107 @@
               padding-bottom: 23px;
               color: #e53624;
               border-bottom: 1px solid #e53624; }
+            .header .topbar .navigation nav ul li a {
+              text-decoration: none;
+              color: inherit; }
+
+.slides {
+  padding: 190px 0px;
+  font-family: 'Open Sans'; }
+  .slides .sm-heading {
+    color: #f4f5f9;
+    font-size: 24px;
+    font-family: "Source Sans Pro";
+    margin-bottom: 37px; }
+  .slides .main-heading {
+    text-transform: uppercase;
+    font-family: 'Open Sans';
+    font-weight: bold;
+    font-size: 72px;
+    color: #f4f5f9;
+    letter-spacing: 0.1em;
+    margin-bottom: 15px; }
+  .slides .redDot {
+    background-color: #e74c3c;
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    position: relative;
+    margin-bottom: 45px; }
+    .slides .redDot::after {
+      content: "";
+      display: block;
+      height: 1px;
+      width: 80px;
+      background-color: #f1ebe7;
+      position: absolute;
+      top: 4px;
+      left: 22px; }
+    .slides .redDot::before {
+      content: "";
+      display: block;
+      height: 1px;
+      width: 80px;
+      background-color: #f1ebe7;
+      position: absolute;
+      top: 4px;
+      right: 22px; }
+  .slides .par {
+    padding: 0;
+    text-align: center;
+    font-family: "Open Sans";
+    color: #cbc6c0;
+    font-size: 14px;
+    margin-bottom: 63px; }
+  .slides .slide-btn {
+    width: 11.822912vw;
+    padding: 20px 0;
+    text-transform: uppercase;
+    font-family: "Open Sans";
+    font-weight: bold;
+    font-size: 14px;
+    color: #ffffff;
+    background-color: transparent;
+    border: 3px solid transparent;
+    outline: 1px solid #ffffff;
+    outline-offset: -3px;
+    -webkit-transition: background-color 0.2s;
+    transition: background-color 0.2s; }
+    .slides .slide-btn:hover {
+      background-color: #e74c3c;
+      outline: 0px;
+      border: 3px solid #e74c3c; }
+    .slides .slide-btn:first-of-type {
+      margin-right: 28px; }
+
+.carousel-control-next, .carousel-control-prev {
+  width: 45px;
+  height: 45px;
+  background-color: #fff;
+  opacity: 0.25;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%); }
+  .carousel-control-next:hover, .carousel-control-prev:hover {
+    background-color: #e74c3c;
+    opacity: 1; }
+
+.carousel-control-prev {
+  left: 50px;
+  background-image: url("../img/left.png");
+  background-position: center center;
+  background-repeat: no-repeat; }
+  .carousel-control-prev:hover {
+    background-image: url("../img/left-hover.png");
+    background-position: center center;
+    background-repeat: no-repeat; }
+
+.carousel-control-next {
+  right: 50px;
+  background-image: url("../img/right.png");
+  background-position: center center;
+  background-repeat: no-repeat; }
+  .carousel-control-next:hover {
+    background-image: url("../img/right-hover.png");
+    background-position: center center;
+    background-repeat: no-repeat; }
