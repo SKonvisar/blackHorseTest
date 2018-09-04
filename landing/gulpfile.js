@@ -14,7 +14,10 @@ gulp.task('browserSync', function(){
 gulp.task('sass', function(){
     return gulp.src('app/sass/**/*.scss')
     .pipe(sass())
-    .pipe(autoprefixer())
+    .pipe(autoprefixer({
+        browsers: ['last 2 versions'],
+        cascade: false
+    }))
     .pipe(gulp.dest('app/css/'))
     .pipe(browserSync.reload({
         stream: true
