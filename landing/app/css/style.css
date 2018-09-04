@@ -3,3 +3,67 @@
   box-sizing: border-box;
   padding: 0;
   margin: 0; }
+
+.header {
+  width: 100%;
+  background-image: url("../img/header-background.png");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover; }
+  .header .topbar {
+    padding: 40px 0; }
+    .header .topbar .row {
+      -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+      margin-left: 0px;
+      margin-right: 0px;
+      max-height: 52px; }
+    .header .topbar .logo {
+      padding: 0; }
+    .header .topbar .navigation {
+      padding-right: 0;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+      align-items: stretch;
+      -webkit-box-pack: end;
+      -ms-flex-pack: end;
+      justify-content: flex-end; }
+      .header .topbar .navigation nav {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-align: stretch;
+        -ms-flex-align: stretch;
+        align-items: stretch; }
+        .header .topbar .navigation nav ul {
+          list-style-type: none;
+          display: -webkit-box;
+          display: -ms-flexbox;
+          display: flex;
+          -webkit-box-pack: end;
+          -ms-flex-pack: end;
+          justify-content: flex-end;
+          -webkit-box-align: end;
+          -ms-flex-align: end;
+          align-items: flex-end;
+          margin-bottom: 0px; }
+          .header .topbar .navigation nav ul li {
+            font-family: 'Open Sans';
+            font-size: 14px;
+            text-transform: uppercase;
+            color: #f4f5f9;
+            margin-right: 60px;
+            padding-bottom: 23px;
+            border-bottom: 1px solid transparent;
+            -webkit-transition: border linear 0.2s;
+            transition: border linear 0.2s; }
+            .header .topbar .navigation nav ul li:last-of-type {
+              margin-right: 0; }
+            .header .topbar .navigation nav ul li:hover {
+              font-size: 14px;
+              padding-bottom: 23px;
+              color: #e53624;
+              border-bottom: 1px solid #e53624; }

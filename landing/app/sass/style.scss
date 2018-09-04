@@ -3,3 +3,61 @@
     padding: 0;
     margin: 0;
 }
+
+.header {
+   width: 100%;
+   background-image: url("../img/header-background.png");
+   background-position: center center;
+   background-repeat: no-repeat;
+   background-size: cover;
+   .topbar {
+    //    padding-top: 40px;
+    //    padding-bottom: 40px;
+       padding:40px 0;
+       .row {
+           flex-wrap: nowrap;
+           margin-left: 0px;
+           margin-right: 0px;
+           max-height: 52px;
+       }
+       .logo {
+           padding: 0;
+       }
+       .navigation {
+           padding-right: 0;
+           display: flex;
+           align-items: stretch;
+           justify-content: flex-end;
+           nav {
+               display: flex;
+               align-items: stretch;
+               ul {
+                    list-style-type: none;
+                    display: flex;
+                    justify-content: flex-end;
+                    align-items: flex-end;
+                    margin-bottom: 0px;
+                    li{
+                        font-family: 'Open Sans';
+                        font-size: 14px;
+                        text-transform: uppercase;
+                        color:#f4f5f9;
+                        margin-right: 60px;
+                        padding-bottom: 23px;
+                        border-bottom: 1px solid transparent;
+                        transition: border linear 0.2s;
+                        &:last-of-type{
+                            margin-right: 0;
+                        }
+                        &:hover {
+                            font-size: 14px;
+                            padding-bottom: 23px;
+                            color: #e53624;
+                            border-bottom: 1px solid #e53624;
+                        }
+                    }
+               }
+           }
+       }
+   } 
+}
