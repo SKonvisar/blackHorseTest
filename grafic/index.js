@@ -1,5 +1,14 @@
 var array = [5,8,2,1,15,2,3,5,9,11,10,4,3,14,1,7,10,3,2,13];
 var board = document.querySelector('.board');
+var resetBtn = document.getElementById('resetBtn');
+var setBtn = document.getElementById('setBtn');
+
+resetBtn.addEventListener('click', function(){
+    reset();
+});
+setBtn.addEventListener('click', function(){
+    setWindow();
+});
 
 buildGraphic(array);
 
@@ -22,7 +31,6 @@ function buildGraphic (arr) {
     }, 300);
     printBars(mapped, board);
     
-
     function printBars(arr, parent){
         let cash = null;
         for(let i=0; i < arr.length; i++){
@@ -69,5 +77,49 @@ function buildGraphic (arr) {
             parent.appendChild(cash);
             cash = null;
         }
+    }
+}
+
+function reset(){
+    clearField(board);
+    buildGraphic(array);
+}
+function clearField(field) {
+    let children = field.children;
+    console.log(children[0].children.length);
+    while (children.length != 1){
+        field.removeChild(children[1]);
+    }
+    while (children[0].children.length != 0){
+        children[0].removeChild(children[0].children[0]);
+    }
+    // for (let i = 1; i < children.length; i++){
+    //     console.log(children[i]);
+    //     field.removeChild(children[i]);
+    // }
+}
+
+function setWindow() {
+    let bg = document.createElement('div');
+    bg.className = "modal-bg";
+    
+    showModal();
+    modalWindow();
+
+    function showModal() {
+        document.body.insertBefore(bg, document.body.firstElementChild);
+    }
+    function modalWindow(){
+        let window = document.createElement('div');
+        let heading = document.createElement('h3');
+        heading.innerHTML = 'Test';
+        let closeButton = document.createElement('button');
+        closeButton.innerHTML = 'Close';
+        closeButton.onclick = function (){
+            document.body.removeChild(bg)
+        }
+        window.appendChild(heading);
+        window.appendChild(closeButton);
+        bg.appendChild(window);
     }
 }
