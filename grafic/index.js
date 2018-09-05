@@ -2,13 +2,50 @@ var array = [5,8,2,1,15,2,3,5,9,11,10,4,3,14,1,7,10,3,2,13];
 var board = document.querySelector('.board');
 var resetBtn = document.getElementById('resetBtn');
 var setBtn = document.getElementById('setBtn');
+var modal = document.querySelector('.modal-bg');
+var cancelBtn = document.querySelector('.cancel');
+var okBtn = document.querySelector('.ok');
+var input = document.querySelector('.modal-input input');
+var addBtn = document.querySelector('.addBtn');
+var added = document.querySelector('.modal-added');
+var newArr = [];
 
 resetBtn.addEventListener('click', function(){
-    reset();
+    reset(array);
 });
 setBtn.addEventListener('click', function(){
-    setWindow();
+    modal.classList.toggle('active');
 });
+cancelBtn.addEventListener('click', function(){
+    modal.classList.toggle('active');
+});
+okBtn.addEventListener('click', function(){
+    reset(newArr);
+    modal.classList.toggle('active');
+    newArr = [];
+    while (added.children.length != 0){
+        added.removeChild(added.children[0]);
+    }
+});
+addBtn.addEventListener('click', function(){
+    let isNumber = Boolean(Number(input.value));
+    if (input.value != "" && isNumber) {
+        let itm = document.createElement('div');
+        itm.className = "itm";
+        itm.innerHTML = input.value;
+        console.log(added);
+        added.appendChild(itm)
+        newArr.push(input.value);
+        input.value = "";
+    } else {
+        input.value = "";
+        return;
+    }
+});
+
+
+
+
 
 buildGraphic(array);
 
@@ -80,9 +117,9 @@ function buildGraphic (arr) {
     }
 }
 
-function reset(){
+function reset(arr){
     clearField(board);
-    buildGraphic(array);
+    buildGraphic(arr);
 }
 function clearField(field) {
     let children = field.children;
@@ -97,29 +134,4 @@ function clearField(field) {
     //     console.log(children[i]);
     //     field.removeChild(children[i]);
     // }
-}
-
-function setWindow() {
-    let bg = document.createElement('div');
-    bg.className = "modal-bg";
-    
-    showModal();
-    modalWindow();
-
-    function showModal() {
-        document.body.insertBefore(bg, document.body.firstElementChild);
-    }
-    function modalWindow(){
-        let window = document.createElement('div');
-        let heading = document.createElement('h3');
-        heading.innerHTML = 'Test';
-        let closeButton = document.createElement('button');
-        closeButton.innerHTML = 'Close';
-        closeButton.onclick = function (){
-            document.body.removeChild(bg)
-        }
-        window.appendChild(heading);
-        window.appendChild(closeButton);
-        bg.appendChild(window);
-    }
 }

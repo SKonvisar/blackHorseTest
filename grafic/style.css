@@ -217,7 +217,7 @@ body {
     width: 100%;
     height: 100%;
     background-color: rgba(0,0,0,0.8);
-    display: flex;
+    display: none;
     flex-flow: row nowrap;
     justify-content: center;
     align-items: center;
@@ -228,6 +228,73 @@ body {
     left: 0;
     right: 0;
 }
-.modal-bg div {
+.modal-bg .modal-wrap{
     background-color: #fff;
+    padding: 40px 60px;
+    text-align: right;
+}
+.modal-wrap h2 {
+    color:#3DBFFC;
+    text-align: center;
+    margin-bottom: 15px;
+}
+.modal-input {
+    width: 100%;
+    position: relative;
+    margin-bottom: 15px;
+}
+.modal-input input {
+    width: 100%;
+    height: 40px;
+    padding: 5px 45px 5px 5px;
+    font-size: 16px;
+}
+.modal-input .addBtn {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 45px;
+    height: 40px;
+    background-color: #1F77FF;
+    border: none;
+    color: white;
+    text-transform: uppercase;
+}
+.modal-added {
+    width: 100%;
+    padding: 10px 15px;
+    background-color: #E8E8E8;
+    border: 1px solid #CBCBCB;
+    border-radius: 10px;
+    height: 300px;
+    display: flex;
+    flex-flow: column wrap;
+}
+.modal-added .itm {
+    padding: 3px 5px;
+    background-color: #3FA2FF;
+    margin-bottom: 5px;
+    margin-right: 5px;
+    text-align: center;
+}
+
+.ok {
+    background-color: #00FF1B;
+    text-transform: uppercase;
+    color: black;
+    padding: 10px 10px;
+    margin-top: 15px;
+    border: none;
+}
+.cancel {
+    background-color: #FF1429;
+    text-transform: uppercase;
+    color: black;
+    padding: 10px 10px;
+    margin-top: 15px;
+    border: none;
+}
+
+.active {
+    display: flex;
 }
