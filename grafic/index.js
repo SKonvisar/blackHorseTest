@@ -35,7 +35,7 @@ addBtn.addEventListener('click', function(){
         itm.innerHTML = input.value;
         console.log(added);
         added.appendChild(itm)
-        newArr.push(input.value);
+        newArr.push(+input.value);
         input.value = "";
     } else {
         input.value = "";
@@ -54,7 +54,6 @@ function buildGraphic (arr) {
     let max = getMaxValue(arr);
     let width = 1000 / length - 10;             
     let highStep = Math.floor(500 / max);       
-
     let mapped = arr.map(function(val, i){         
         let a = {};
         a.value = val;
